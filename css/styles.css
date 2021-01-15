@@ -341,6 +341,20 @@ body {
   padding: 0 0 0 15rem;
 }
 
+.home__left span {
+  display: inline-block;
+  margin-left: -1.5rem;
+  cursor: default;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.home__left span:hover {
+  color: #f04f5f;
+  -webkit-animation: rubberBand 1s;
+          animation: rubberBand 1s;
+}
+
 .home__right {
   position: relative;
 }
