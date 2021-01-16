@@ -20,6 +20,35 @@ function toggleNav() {
 //Parallax for the scene
 let parallaxInstance = new Parallax(scene)
 
-//Lander animation
-let t1 = gsap.timeline({ defaults: { duration: ".5", ease: "ease-in" } })
-t1.to(".lander--1", { y: "-100%" }).to(".lander--2", { y: "-100%", delay: "-.35" }).to(".lander--3", { y: "-100%", delay: "-.35" }).to(".lander", { y: "-100%", delay: "-.5" }).fromTo(".home__left", { x: "-100%" }, { x: "0", delay: "-.5" }).fromTo(".scene", { x: "100%" }, { x: "0", delay: "-.5" }).fromTo(".header", { opacity: 0 }, { opacity: 1 })
+//barba
+barba.init({
+  transitions: [
+    {
+      name: "loading-animation",
+      once() {
+        return gsap.fromTo(
+          ".loader",
+          {
+            scaleY: "1",
+            transformOrigin: "bottom left",
+            duration: ".5s"
+          },
+          {
+            scaleY: "0",
+            transformOrigin: "top left",
+            duration: ".5",
+            delay: "1"
+          }
+        )
+      },
+      afterOnce() {
+        return gsap.timeline().to(".home__left", {
+          x: "0",
+          duration: ".5"
+        })
+      },
+      leave() {},
+      enter() {}
+    }
+  ]
+})
