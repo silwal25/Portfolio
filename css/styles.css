@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&display=swap");
 *, *::before, *::after {
   padding: 0;
   margin: 0;
@@ -118,28 +119,85 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
+  margin-right: 3rem;
+  position: relative;
+  -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.btn:before, .btn:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: inherit;
+  transition: inherit;
+  z-index: -1;
+}
+
+.btn:hover {
+  color: #ffffff;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.btn:hover:before {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.btn:hover:after {
+  background: #000000;
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.btn--animate-top:before, .btn--animate-top:after {
+  left: 0;
+  height: 0;
+  width: 100%;
+}
+
+.btn--animate-top:before {
+  bottom: 0;
+  border: 2px solid #000000;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.btn--animate-top:after {
+  top: 0;
+  height: 0;
+}
+
+.btn--animate-top:hover:before, .btn--animate-top:hover:after {
+  height: 100%;
 }
 
 .header {
-  padding: 4rem 6rem;
+  padding: 0 6rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 10vh;
 }
 
 .header__logo, .header__logo:link, .header__logo:visited {
   text-transform: uppercase;
   font-size: 2.25rem;
-  font-weight: 500;
+  font-weight: 300;
   text-decoration: none;
   color: inherit;
+  cursor: default;
+}
+
+.header__logo span {
+  display: block;
 }
 
 .header__social-icons {
@@ -150,10 +208,24 @@ body {
   margin-right: 6rem;
   margin-left: auto;
   height: 100%;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__social-icons li:not(:last-child) {
   margin-right: 2.5rem;
+}
+
+.header__social-icons li {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header__social-icons li:hover, .header__social-icons li:focus {
+  -webkit-transform: scale(1.15) translateY(-3px);
+          transform: scale(1.15) translateY(-3px);
 }
 
 .header__social-link, .header__social-link:link, .header__social-link:visited {
@@ -164,6 +236,12 @@ body {
 .header__btn, .header__btn:link, .header__btn:visited {
   padding: 1rem 2.5rem !important;
   font-size: 1.5rem;
+}
+
+.header__btn:hover, .header__btn:focus {
+  -webkit-animation: pulse 0.6s infinite;
+          animation: pulse 0.6s infinite;
+  color: #000000 !important;
 }
 
 .navigation {
@@ -190,25 +268,69 @@ body {
   color: inherit;
   font-size: 2rem;
   text-transform: uppercase;
+  position: relative;
+}
+
+.navigation__link::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  pointer-events: none;
+  background-color: #000000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.navigation__link:hover::after, .navigation__link:focus::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .container {
   max-width: 1450px;
   margin: 0 auto;
-  height: 100%;
 }
 
 .home {
-  height: 100%;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .hero__wrapper .heading-primary {
+  font-family: "Bodoni Moda", serif;
 }
 
 .home .hero__wrapper .heading-primary span {
   display: block;
+}
+
+.home__name {
+  display: inline-block !important;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.home__name:not(:last-child) {
+  margin-right: -1.7rem;
+}
+
+.home__name:hover {
+  -webkit-animation: rubberBand 1s;
+          animation: rubberBand 1s;
 }
 /*# sourceMappingURL=styles.css.map */
