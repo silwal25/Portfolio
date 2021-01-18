@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -108,7 +109,7 @@ body::-webkit-scrollbar-thumb {
 
 body {
   font-size: 1rem;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: #000000;
 }
@@ -122,9 +123,15 @@ body {
 }
 
 .heading-tertiary {
+  display: block;
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+.heading-quaternary {
+  text-transform: capitalize;
+  font-weight: 300;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -614,5 +621,123 @@ body {
   text-align: center;
   margin-top: 20vh;
   margin-bottom: 10vh;
+}
+
+.resume .container {
+  padding: 10vh 10rem 10vh 0;
+}
+
+.resume .heading-secondary {
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+.resume__contacts {
+  min-height: 15vh;
+  -webkit-columns: 2;
+          columns: 2;
+  padding: 3rem 0;
+}
+
+.resume__contacts span {
+  display: block;
+}
+
+.resume__objective {
+  padding-bottom: 3rem;
+}
+
+.resume__education {
+  margin-bottom: 3rem;
+}
+
+.resume__education > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.resume__education--left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.resume__education--right {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.resume__education span {
+  display: block;
+}
+
+.resume__experience {
+  padding-bottom: 3rem;
+}
+
+.resume__experience > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.resume__experience--left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.resume__experience--right {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.resume__skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.resume__skills--left, .resume__skills--right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-right: 5rem;
+}
+
+.resume__skills--left .skills__group, .resume__skills--right .skills__group {
+  margin-top: 1rem;
+}
+
+.resume .tab {
+  display: inline-block;
+  width: 5rem;
+}
+
+.resume__other-skills > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.resume__other-skills--left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.resume__other-skills--right {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.resume__other-skills span {
+  display: block;
 }
 /*# sourceMappingURL=styles.css.map */
