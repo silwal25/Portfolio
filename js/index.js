@@ -91,6 +91,9 @@ function contentAnimationIn() {
     },
     "0.75"
   )
+  tl.to("img", {
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
+  })
 }
 
 barba.init({
