@@ -96,6 +96,16 @@ body::after {
   pointer-events: none;
 }
 
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 1rem;
+}
+
 body {
   font-size: 1rem;
   font-family: "IBM Plex Sans", sans-serif;
@@ -112,8 +122,9 @@ body {
 }
 
 .heading-tertiary {
-  text-transform: capitalize;
-  font-size: 2rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -196,6 +207,7 @@ body {
           align-items: center;
   pointer-events: none;
   display: flex;
+  z-index: 1000;
 }
 
 .loader div {
@@ -496,5 +508,111 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.skills__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skills__content--left, .skills__content--right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 10rem;
+}
+
+.skills__group {
+  display: block;
+}
+
+.skills__group:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.skills__group-progress {
+  margin-top: 1rem;
+  width: 100%;
+  height: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #000000;
+  overflow: hidden;
+}
+
+.skills__group-progress span {
+  display: block;
+  background-color: #000000;
+  height: 100%;
+}
+
+.work__header {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.work__content-wrapper {
+  position: relative;
+}
+
+.work__content-wrapper:hover .work__image {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.work__content-wrapper:hover .work__title-box {
+  background-color: #d4d4d4;
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.work__image {
+  width: 70%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+          clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100%);
+}
+
+.work__title-box {
+  position: absolute;
+  right: 12rem;
+  bottom: 0;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding: 1rem 1.5rem;
+}
+
+.work__arrow {
+  display: block;
+  text-align: right;
+  font-size: 3rem;
+}
+
+.work__arrow a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.work__filler {
+  display: block;
+  height: 10vh;
+  width: 100%;
+  text-align: center;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
 }
 /*# sourceMappingURL=styles.css.map */
