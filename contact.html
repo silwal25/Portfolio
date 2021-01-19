@@ -65,7 +65,8 @@
                 <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga saepe molestias veritatis at deserunt eius nulla voluptate non veniam consectetur, nemo facere ullam ratione, exercitationem porro hic earum asperiores dolor.</p>
               </div>
               <div class="contact--right">
-                <form action="#" class="form">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form">
+                  <input type="text" name="bot-field" hidden />
                   <div class="form__group">
                     <input type="text" class="form__input" placeholder="Enter Name" id="name">
                     <label for="name" class="form__label">Enter Name</label>
