@@ -42,6 +42,9 @@
         </li>
       </ul>
         <a href="./resume.html" class="btn header__btn">resume</a>
+        <div class="header__burger">
+          <span class="line"></span>
+        </div>
     </header>
     <nav class="navigation">
       <ul class="navigation__list">
@@ -49,36 +52,46 @@
         <li><a href="./about.html" class="navigation__link">About</a></li>
         <li><a href="./skills.html" class="navigation__link">Skills</a></li>
         <li><a href="./projects.html" class="navigation__link">Work</a></li>
+        <li><a href="./resume.html" class="navigation__link">Resume</a></li>
       </ul>
     </nav>
     <main class="main resume" data-barba="container" data-barba-namespace="resume">
       <div class="container">
         <h1 class="heading-secondary">Lalit Singh Silwal</h1>
         <h4 class="heading-tertiary">Web Developer</h4>
-        <div class="resume__contacts">
-          <span>Email: lalitsilwal@hotmail.com</span>
-          <span>Linkedin: linkedin.com/in/lalit-silwal/</span>
-          <span>Github: github.com/silwal25</span>
+        <div class="row resume__contacts">
+          <div class="resume__contacts--left">
+            <span>Email: lalitsilwal@hotmail.com</span>
+            <span>Linkedin: linkedin.com/in/lalit-silwal/</span>
+          </div>
+          <div class="resume__contacts--right">
+            <span>Github: github.com/silwal25</span>
           <span>Portfolio: lalitsilwal.com</span>
+          </div>
         </div>
         <div class="resume__objective">
           <p class="paragraph">“I am a recent computer science graduate seeking a full-time position in web development where I can lend my knowledge of various technologies to help your organization make scalable and highly optimized web applications.”</p>
         </div>
         <div class="resume__education">
           <h4 class="heading-tertiary">Education</h4>
-          <div>
-            <div class="resume__education--left">
-              <span>2017-2020:</span>
-              <span>2015-2017:</span>
-              <span>2010-2015:</span>
-            </div>
-            <div class="resume__education--right">
-              <span>Bachelor in Computer Applications, VIPS</span>
-              <span>Science Non-Med, DL DAV Model School, Shalimar Bagh</span>
-              <span>Dayanand Public School</span>
-            </div>
-          </div>
-          
+          <table>
+            <tr>
+              <td style="width: 20%;">
+                2017-2020:
+              </td>
+              <td>
+                Bachelor in Computer Applications, VIPS
+              </td>
+            </tr>
+            <tr>
+              <td>2015-2017:</td>
+              <td>Science Non-Med, DL DAV Model School, Shalimar Bagh</td>
+            </tr>
+            <tr>
+              <td>2010-2015:</td>
+              <td>Dayanand Public School</td>
+            </tr>
+          </table>
         </div>
         <div class="resume__experience">
           <h4 class="heading-tertiary">Work Experience</h4>
@@ -169,21 +182,22 @@
         </div>
         <div class="resume__other-skills">
           <h4 class="heading-tertiary">Other skills</h4>
-          <div>
-            <div class="resume__other-skills--left">
-              <span>Technologies:</span>
-              <span>Frameworks:</span>
-              <span>Others:</span>
-            </div>
-            <div class="resume__other-skills--right">
-              <span> C, C++, JAVA, PHP, Python, MongoDB, MySQL, AJAX, JSON</span>
-              <span> SASS, Wordpress, Flask, Bootstrap</span>
-              <span> Linux, Containers.</span>
-            </div>
+          <table>
+            <tr>
+              <td style="width: 30%;">Technologies:</td>
+              <td>C, C++, JAVA, PHP, Python, MongoDB, MySQL, AJAX, JSON</td>
+            </tr>
+            <tr>
+              <td>Frameworks:</td>
+              <td>SASS, Wordpress, Flask, Bootstrap</td>
+            </tr>
+            <tr>
+              <td>Others:</td>
+              <td>Linux, Containers.</td>
+            </tr>
+          </table>
           </div>
         </div>
-      </div>
-      
     </main>
 
     <!-- Impoting js libraries -->

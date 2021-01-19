@@ -19,6 +19,29 @@ function initialLoad() {
 }
  */
 
+//opening navigation
+let navBurger = $(".header__burger")
+let nav = $(".navigation")
+let navItems = $(".navigation li")
+let isNavActive = false
+navBurger.click(() => {
+  if (!isNavActive) {
+    navBurger.addClass("header__burger--active")
+    isNavActive = true
+    nav.addClass("navigation--active")
+  } else {
+    navBurger.removeClass("header__burger--active")
+    isNavActive = false
+    nav.removeClass("navigation--active")
+  }
+})
+navItems.click(() => {
+  console.log("hell")
+  nav.removeClass("navigation--active")
+  navBurger.removeClass("header__burger--active")
+})
+navItems.click(() => {})
+
 //barba js animations
 
 function initialLoad() {
