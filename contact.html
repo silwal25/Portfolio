@@ -68,15 +68,15 @@
                 <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form">
                   <input type="text" name="bot-field" hidden />
                   <div class="form__group">
-                    <input type="text" class="form__input" placeholder="Enter Name" id="name">
+                    <input type="text" class="form__input" placeholder="Enter Name" id="name" name="name">
                     <label for="name" class="form__label">Enter Name</label>
                   </div>
                   <div class="form__group">
-                    <input type="email" class="form__input" placeholder="Enter Email" id="email">
+                    <input type="email" class="form__input" placeholder="Enter Email" id="email" name="email">
                     <label for="email" class="form__label">Enter Email</label>
                   </div>
                   <div class="form__group">
-                    <textarea class="form__input" placeholder="Enter Message" id="message" rows="5"></textarea>
+                    <textarea class="form__input" placeholder="Enter Message" id="message" name="message" rows="5"></textarea>
                     <label for="message" class="form__label">Enter Message</label>
                   </div>
                   <button class="btn form__btn btn--animate-top">Submit</button>
