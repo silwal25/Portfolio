@@ -107,6 +107,7 @@ body {
   text-rendering: optimizeLegibility;
   --webkit-font-smoothing: antialiased;
   height: 100%;
+  margin-bottom: 5rem;
 }
 
 body::after {
@@ -756,6 +757,10 @@ body {
   display: block;
   background-color: #000000;
   height: 100%;
+}
+
+.skills__content--right ul {
+  list-style-type: circle;
 }
 
 .work__header {
